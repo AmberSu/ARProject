@@ -10,8 +10,9 @@
 		22DC2C0E1FCB1A6D00F493DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC2C0D1FCB1A6D00F493DA /* AppDelegate.swift */; };
 		22DC2C101FCB1A6D00F493DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC2C0F1FCB1A6D00F493DA /* ViewController.swift */; };
 		22DC2C131FCB1A6D00F493DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DC2C111FCB1A6D00F493DA /* Main.storyboard */; };
-		22DC2C151FCB1A6D00F493DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DC2C141FCB1A6D00F493DA /* Assets.xcassets */; };
 		22DC2C181FCB1A6D00F493DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DC2C161FCB1A6D00F493DA /* LaunchScreen.storyboard */; };
+		22DC2C201FCB321200F493DA /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DC2C1F1FCB321200F493DA /* Models.scnassets */; };
+		22DC2C241FCB5E5100F493DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DC2C231FCB5E5100F493DA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +20,10 @@
 		22DC2C0D1FCB1A6D00F493DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22DC2C0F1FCB1A6D00F493DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22DC2C121FCB1A6D00F493DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		22DC2C141FCB1A6D00F493DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22DC2C171FCB1A6D00F493DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22DC2C191FCB1A6D00F493DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22DC2C1F1FCB321200F493DA /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
+		22DC2C231FCB5E5100F493DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 				22DC2C0D1FCB1A6D00F493DA /* AppDelegate.swift */,
 				22DC2C0F1FCB1A6D00F493DA /* ViewController.swift */,
 				22DC2C111FCB1A6D00F493DA /* Main.storyboard */,
-				22DC2C141FCB1A6D00F493DA /* Assets.xcassets */,
+				22DC2C231FCB5E5100F493DA /* Assets.xcassets */,
+				22DC2C1F1FCB321200F493DA /* Models.scnassets */,
 				22DC2C161FCB1A6D00F493DA /* LaunchScreen.storyboard */,
 				22DC2C191FCB1A6D00F493DA /* Info.plist */,
 			);
@@ -124,7 +127,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22DC2C181FCB1A6D00F493DA /* LaunchScreen.storyboard in Resources */,
-				22DC2C151FCB1A6D00F493DA /* Assets.xcassets in Resources */,
+				22DC2C201FCB321200F493DA /* Models.scnassets in Resources */,
+				22DC2C241FCB5E5100F493DA /* Assets.xcassets in Resources */,
 				22DC2C131FCB1A6D00F493DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

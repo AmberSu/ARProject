@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AugmentedRealityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJZ-jb-kaT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xC5-32-Y18" appends="YES" id="M7t-co-75V"/>
+                                    <outletCollection property="gestureRecognizers" destination="Iqc-VE-03S" appends="YES" id="U12-4a-mck"/>
+                                </connections>
+                            </arscnView>
+                            <pickerView hidden="YES" contentMode="scaleAspectFill" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="wcm-Vk-M74">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.038114561749999998" green="0.1328323287" blue="0.10373037559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="en2-ra-aMC"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Alj-gJ-gAs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0RQ-t2-0Qo"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QJZ-jb-kaT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3p1-U1-gRu"/>
+                            <constraint firstItem="wcm-Vk-M74" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FdY-7F-rqi"/>
+                            <constraint firstItem="wcm-Vk-M74" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S9b-yC-SBM"/>
+                            <constraint firstItem="QJZ-jb-kaT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XVv-0E-EqJ"/>
+                            <constraint firstItem="wcm-Vk-M74" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="c2H-aV-ZhR"/>
+                            <constraint firstItem="QJZ-jb-kaT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rry-2f-Xjf"/>
+                            <constraint firstItem="QJZ-jb-kaT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uir-CZ-hE5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="objectPicker" destination="wcm-Vk-M74" id="37j-pY-ldG"/>
+                        <outlet property="sceneView" destination="QJZ-jb-kaT" id="bgX-MD-qdS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="xC5-32-Y18">
+                    <connections>
+                        <action selector="swipeUp:" destination="BYZ-38-t0r" id="vKO-y1-cBi"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Iqc-VE-03S">
+                    <connections>
+                        <action selector="swipeDown:" destination="BYZ-38-t0r" id="Ei5-eL-lg6"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="127.28635682158921"/>
         </scene>
     </scenes>
 </document>
